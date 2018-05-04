@@ -1,3 +1,18 @@
-<p>
-  story works!
-</p>
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Pitch</th>
+			<th>Protagonists</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let story of stories">
+			<td>{{story.title}}</td>
+			<td>{{story.pitch}}</td>
+			<td>{{story.protagonists}}</td>
+			<td><a href="/story/{{$index}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+		</tr>
+	</tbody>
+</table>
