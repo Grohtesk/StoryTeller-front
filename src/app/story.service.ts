@@ -14,8 +14,17 @@ export class StoryService {
 	constructor(private http: HttpClient){}
 
 
-  getStories(): Observable<Story[]>{
-  	return this.http.get<Story[]>(this.storyUrl, httpOptions)
-  }
+	getStories(): Observable<Story[]>{
+		return this.http.get<Story[]>(this.storyUrl, httpOptions)
+	}
+
+	getStory(id: String): Observable<Story>{
+		return this.http.get<Story>(this.storyUrl+"/"+id, httpOptions)
+	}
+
+	saveStory(story: Story): Observable<any>{
+		console.log(story)
+		return this.http.post(this.storyUrl, story, httpOptions)
+	}
 
 }

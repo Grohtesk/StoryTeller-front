@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { StoryComponent } from './story/story.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { StoryService } from './story.service'
+import { StoryService } from './story.service';
+import { StoryDetailComponent } from './story-detail/story-detail.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoryComponent
+    StoryComponent,
+    StoryDetailComponent
   ],
   imports: [
     BrowserModule,

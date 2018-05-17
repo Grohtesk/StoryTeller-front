@@ -2,6 +2,7 @@
 	<thead>
 		<tr>
 			<th>Title</th>
+			<th>Subtitle</th>
 			<th>Pitch</th>
 			<th>Protagonists</th>
 			<th>Actions</th>
@@ -9,7 +10,8 @@
 	</thead>
 	<tbody>
 		<tr *ngFor="let story of stories">
-			<td>{{story.title}}</td>
+			<td><a href="/story/{{story.id}}">{{story.title}}</a></td>
+			<td>{{story.subtitle}}</td>
 			<td>{{story.pitch}}</td>
 			<td>{{story.protagonists}}</td>
 			<td><a href="/story/{{$index}}"><button type="button" class="btn btn-success">Edit</button></a></td>
