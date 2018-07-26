@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 
 import { Story } from '../story'
+import { Protagonist } from '../protagonist'
 import { StoryService } from '../story.service'
 
 
@@ -29,6 +30,10 @@ export class StoryDetailComponent implements OnInit {
 
 	updateStory(){
 		this.storyService.saveStory(this.story).subscribe(res => console.log(res))
+	}
+
+	addProtagonist(){
+		this.story.protagonists.push(new Protagonist())
 	}
 
 }
