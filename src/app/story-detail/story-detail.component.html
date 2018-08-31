@@ -23,8 +23,8 @@
 		<tr *ngFor="let protagonist of story.protagonists">
 			<!-- <td><input type="text" class="form-control" [(ngModel)]="protagonist.name"></td> -->
 			<td><a href="story/{{story.id}}/protagonist/{{protagonist.id}}"><button type="button" class="btn btn-default">details</button></a></td>
-			<td><input type="text" class="form-control" [(ngModel)]="protagonist.lastName"></td>
 			<td><input type="text" class="form-control" [(ngModel)]="protagonist.firstName"></td>
+			<td><input type="text" class="form-control" [(ngModel)]="protagonist.lastName"></td>
 			<td><input type="text" class="form-control" [(ngModel)]="protagonist.description"></td>
 			<td><input type="text" class="form-control" [(ngModel)]="protagonist.personality"></td>
 			<td><input type="text" class="form-control" [(ngModel)]="protagonist.background"></td>

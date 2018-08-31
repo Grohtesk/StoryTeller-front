@@ -27,9 +27,4 @@ export class StoryService {
 		return this.http.post(this.storyUrl, story, httpOptions)
 	}
 
-	getProtagonist(storyId: String,protagonistId: String): Observable<Protagonist>{
-		return this.http.get<Protagonist>(this.storyUrl+"/"+storyId+"/protagonist/"+protagonistId, httpOptions)
-	}
-
-
 }

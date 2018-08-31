@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { StoryComponent } from './story/story.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { StoryService } from './story.service';
+import { ProtagonistService } from './protagonist.service';
 import { StoryDetailComponent } from './story-detail/story-detail.component';
 import { ProtagonistComponent } from './protagonist/protagonist.component';
 
@@ -24,7 +25,7 @@ import { ProtagonistComponent } from './protagonist/protagonist.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [StoryService],
+  providers: [StoryService, ProtagonistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
